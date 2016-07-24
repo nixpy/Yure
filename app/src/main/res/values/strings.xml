@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Yure</string>
+    <string name="action_settings">Settings</string>
 </resources>

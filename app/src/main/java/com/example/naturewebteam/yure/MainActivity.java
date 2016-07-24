@@ -1,6 +1,7 @@
 package com.example.naturewebteam.yure;
 
 import android.app.PendingIntent;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -105,6 +106,11 @@ public class MainActivity extends AppCompatActivity {
                 edtText = (EditText) findViewById(R.id.editText);
                 edtText.setText(txt.getText().toString());
                 Toast.makeText(MainActivity.this, message, Toast.LENGTH_LONG ).show();
+
+                // next to activity.
+                Intent intent = new Intent(MainActivity.this, Detailed.class);
+                intent.putExtra("myText", txt.getText().toString());
+                startActivity(intent);
             }
         });
     }
